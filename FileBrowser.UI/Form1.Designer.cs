@@ -35,6 +35,8 @@
             this.textBoxSearchPhrase = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.listBoxResult = new System.Windows.Forms.ListBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblSelectAFile
@@ -48,30 +50,30 @@
             // 
             // buttonOpenFile
             // 
-            this.buttonOpenFile.Location = new System.Drawing.Point(81, 89);
+            this.buttonOpenFile.Location = new System.Drawing.Point(81, 77);
             this.buttonOpenFile.Name = "buttonOpenFile";
             this.buttonOpenFile.Size = new System.Drawing.Size(78, 23);
             this.buttonOpenFile.TabIndex = 1;
             this.buttonOpenFile.Text = "Open";
             this.buttonOpenFile.UseVisualStyleBackColor = true;
+            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
             // 
             // lblFileName
             // 
             this.lblFileName.AutoSize = true;
             this.lblFileName.Location = new System.Drawing.Point(153, 61);
             this.lblFileName.Name = "lblFileName";
-            this.lblFileName.Size = new System.Drawing.Size(119, 13);
+            this.lblFileName.Size = new System.Drawing.Size(0, 13);
             this.lblFileName.TabIndex = 2;
-            this.lblFileName.Text = "Replace with File Name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(81, 149);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 13);
+            this.label1.Size = new System.Drawing.Size(275, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Search For Keyword or Phrase:";
+            this.label1.Text = "Search For Keyword or Phrase (search is case sensitive):";
             // 
             // textBoxSearchPhrase
             // 
@@ -88,6 +90,7 @@
             this.buttonSearch.TabIndex = 5;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // listBoxResult
             // 
@@ -97,11 +100,25 @@
             this.listBoxResult.Size = new System.Drawing.Size(635, 160);
             this.listBoxResult.TabIndex = 6;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(84, 250);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(320, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Results Show All Lines of Text that Contain the Keyword or Phrase";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.listBoxResult);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxSearchPhrase);
@@ -125,6 +142,8 @@
         private System.Windows.Forms.TextBox textBoxSearchPhrase;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.ListBox listBoxResult;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
